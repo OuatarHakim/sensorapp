@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import  './Broker.module.css'
+
 
 
 const BrokerMqtt =({connect , disconnect ,connectBtn }) => {
@@ -16,10 +18,10 @@ const BrokerMqtt =({connect , disconnect ,connectBtn }) => {
    const handleconnect = (event) => {
     event.preventDefault();
 
-    connect(broker,"value/#")
+    connect(broker)
    }
    return (
-    <div className='url-content'>
+    <div className="form-group">
         <p>MQTT broker : </p>
 
         <form >

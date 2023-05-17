@@ -37,9 +37,9 @@ import BrokerMqtt from '../Mqtt/BrokerMqtt'
                 })
                 
                   client.on('message' , (topic , message) => {
-                    console.log(`hakim`);
-                   
-                    console.log(`received message: ${message} from topic: ${topic}`)
+                    let  prevMessages = messages
+                    setMessages(message);
+                    console.log(`Received message: ${message} from topic: ${topic}`);
                 })
                 client.subscribe("value/#")
               
@@ -82,12 +82,12 @@ import BrokerMqtt from '../Mqtt/BrokerMqtt'
               connectBtn={connectStatus}
               />
             
-             <ul>
-  
-    <li >
-      <strong>Topic:</strong> {messages}, <strong>Message:</strong> {messages}
+            <ul>
+  {messages.map((message, index) => (
+    <li key={index}>
+      <p>name:</p> {message.name}, <p>value:</p> {message.value}
     </li>
-
+  ))}
 </ul>
 
             </>
