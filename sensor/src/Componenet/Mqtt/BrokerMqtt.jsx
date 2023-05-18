@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import  './Broker.module.css'
+
+import  style from'./Broker.module.css'
 
 
 
@@ -12,28 +13,30 @@ const BrokerMqtt =({connect , disconnect ,connectBtn }) => {
     }
     
   
-   const handleDisconnect = () => {
-    disconnect()
-   }
+    
    const handleconnect = (event) => {
-    event.preventDefault();
-
+    if(connectBtn === 'Connect'){
+    event.preventDefault()
     connect(broker)
+    }else if(connectBtn === 'Disconnect'){
+        disconnect()
+    
+    }
    }
    return (
-    <div className="form-group">
-        <p>MQTT broker : </p>
+    <div className={style.broker}>
+    <div className={style.formgroup}>
+        <p><strong>MQTT broker :  </strong></p>
 
         <form >
                
-               <input id ="url" className="form-field" text="text" placecholder="URL" onChange = {changeBroker}   value = {broker}/>
+               <input id ="url" className={style.styleformfield} text="text" placecholder="URL" onChange = {changeBroker}   value = {broker}/>
                   
-          
-           <button className="ButtonInput" onClick={handleconnect}>{connectBtn}</button>
-           <button className="ButtonInput" onClick={handleDisconnect}>Disconnect</button>
+           <button className={style.ButtonInput} onClick={handleconnect}>{connectBtn}</button>
           
      </form>
 
+   </div>
    </div>
    )
 }

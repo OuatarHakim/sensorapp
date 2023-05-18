@@ -1,4 +1,4 @@
-.form-field {
+.formfield {
     display: flex;
    
     padding: 8px 16px;
@@ -9,10 +9,9 @@
    
 }
 form{
-    width: 70%;
-    justify-content: center;
+    margin-left: 20px;
 }
-.form-group {
+.formgroup {
       display: flex;
       width: 100%;
      justify-content: center;
@@ -35,9 +34,7 @@ form{
         border-radius: 10%;
     }
      .ButtonInput{
-         padding: 10px;
-         margin-top:20px;
-         font-size: large;
+         margin-left:20px;
      }
     .history{
         display: grid;
@@ -47,4 +44,11 @@ form{
         padding: 10px;
         border: 1px solid black;
     }
-    
+    .broker p{
+        display: contents;
+        margin-right: 20px;
+        font-size: large;
+    }    
+.broker {
+    display: contents;
+}

@@ -12,11 +12,8 @@ import BrokerMqtt from '../Mqtt/BrokerMqtt'
 
        
         const connectMqtt = (host) => {
-            
              setConnectStatus('Connecting')
              setClient(mqtt.connect(host))
-          
-            
           
         }
 
@@ -24,7 +21,7 @@ import BrokerMqtt from '../Mqtt/BrokerMqtt'
         useEffect(() => {
             if(client) {
                 client.on('connect', () => {
-                    setConnectStatus('connected')
+                    setConnectStatus('Disconnect')
                     console.log('connection successful')
                 })
                 
@@ -44,7 +41,7 @@ import BrokerMqtt from '../Mqtt/BrokerMqtt'
                 client.subscribe("value/#")
               
             }
-        } ,[client,messages])
+        } ,[client])
 
         const mqttDisconnect = () => {
             if (client) {
@@ -73,6 +70,7 @@ import BrokerMqtt from '../Mqtt/BrokerMqtt'
         setIsSub(true)
       })
     }
+   
   }
         return (
             <>
@@ -81,7 +79,7 @@ import BrokerMqtt from '../Mqtt/BrokerMqtt'
               disconnect = {mqttDisconnect}
               connectBtn={connectStatus}
               />
-            
+
             <ul>
   {messages.map((message, index) => (
     <li key={index}>
