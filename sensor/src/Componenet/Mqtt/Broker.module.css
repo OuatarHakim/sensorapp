@@ -1,0 +1,54 @@
+.formfield {
+    display: flex;
+   
+    padding: 8px 16px;
+    line-height: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    width: 100%;
+   
+}
+form{
+    margin-left: 20px;
+}
+.formgroup {
+      display: flex;
+      width: 100%;
+     justify-content: center;
+     padding: 50px 0;
+    }
+   span {
+        text-align: center;
+        padding: 8px 12px;
+        font-size: 14px;
+        line-height: 25px;
+       
+    }
+    .form-submit{
+        padding: 20px;
+        font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+        font-size: large;
+        margin-top: 20px;
+        border-radius: 10%;
+    }
+     .ButtonInput{
+         margin-left:20px;
+     }
+    .history{
+        display: grid;
+        justify-content: center;
+    }
+    .history tr {
+        padding: 10px;
+        border: 1px solid black;
+    }
+    .broker p{
+        display: contents;
+        margin-right: 20px;
+        font-size: large;
+    }    
+.broker {
+    display: contents;
+}
