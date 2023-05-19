@@ -80,13 +80,7 @@ import BrokerMqtt from '../Mqtt/BrokerMqtt'
               connectBtn={connectStatus}
               />
 
-            <ul>
-  {messages.map((message, index) => (
-    <li key={index}>
-      <p>name:</p> {message.name}, <p>value:</p> {message.value}
-    </li>
-  ))}
-</ul>
+        
 
             </>
         )
