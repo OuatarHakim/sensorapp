@@ -1,0 +1,6 @@
+
+
+img {
+    width: 90px; /* Spécifiez la largeur souhaitée */
+    height: auto; /* Laissez la hauteur s'ajuster automatiquement pour maintenir les proportions */
+}
