@@ -1,0 +1,10 @@
+.type{
+    color:blue;
+}
+.type li {
+    list-style: none;
+}
+
+.info{
+    display: flex;
+}

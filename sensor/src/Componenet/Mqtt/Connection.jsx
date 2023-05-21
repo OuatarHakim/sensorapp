@@ -1,12 +1,12 @@
 import mqtt from "mqtt/dist/mqtt"
 import { useEffect, useState } from 'react'
 import BrokerMqtt from '../Mqtt/BrokerMqtt'
-
+import Type from "../Type/Type"
 
 
     const BrokerClient = () => {
         const [client ,setClient] = useState(null)
-        const [messages, setMessages] = useState([])
+        const [messages, setMessages] = useState(null)
         const [connectStatus, setConnectStatus] = useState('Connect')
         const [isSubed, setIsSub] = useState(false)
 
@@ -34,7 +34,6 @@ import BrokerMqtt from '../Mqtt/BrokerMqtt'
                 })
                 
                   client.on('message' , (topic , message) => {
-                    let  prevMessages = messages
                     setMessages(message);
                     console.log(`Received message: ${message} from topic: ${topic}`);
                 })
@@ -80,8 +79,10 @@ import BrokerMqtt from '../Mqtt/BrokerMqtt'
               connectBtn={connectStatus}
               />
 
-        
-
+              <Type messageJson ={JSON.parse(messages)}/>
+              
+      
+       
             </>
         )
     }

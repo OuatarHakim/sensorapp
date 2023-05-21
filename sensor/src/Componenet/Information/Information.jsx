@@ -24,7 +24,7 @@ const handleInputChange = (event) => {
 
     return(
 <div className="information">
-    <div class ="Nav">
+    <div className ="Nav">
                         <section>
 
 
@@ -42,17 +42,7 @@ const handleInputChange = (event) => {
                           </nav>
                         </section>
 
-                 <ss>
-                        <div>
-                              <p>MQTT</p>  <input type="text" value={inputValue} onChange={handleInputChange} />
-
-                                {isLoggedIn ? (
-                                  <button onClick={handleLogout}>Déconnecter</button>
-                                ) : (
-                                  <button onClick={handleLogin}>Connecter</button>
-                                )}
-                              </div>
-                              </ss>
+              
                             </div>
 </div>
     );
