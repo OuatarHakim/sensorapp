@@ -5,17 +5,22 @@ import { Link, Route, useParams, useRouteMatch } from 'react-router-dom';
 
 const Info = ({values,type} ) => {
 
-  const valueType = values[type]
-      return(
-        <div className='info'>
-          <h1>{type}</h1>
-          <p>Valeur actuel : </p>
-            {valueType.slice(-1)}
-            <p>Valeur historiques : </p>
+  const [valueType, setValueType] = useState([]);
 
-          <ul>{valueType.map((value) => <li>{value}</li>)}</ul>
-        </div>
-      )
+  useEffect(() => {
+    setValueType(values || []);
+  }, [values]);
+
+  return (
+  
+    <div className='info'>
+      <h1>{type}</h1>
+      <p>Valeur actuelle:</p>
+      {valueType.slice(-1)}
+      <p>Valeurs historiques:</p>
+      <ul>{valueType.map((value) => <li>{value}</li>)}</ul>
+    </div>
+  );
 
 
 }
