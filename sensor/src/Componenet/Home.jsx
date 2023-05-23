@@ -1,4 +1,7 @@
 import Header from "./Header/Header"
+import Information from "./Information/Information"
+import Info from "./Information/info"
+
 import BrokerClient from "./Mqtt/Connection"
 
 
@@ -7,6 +10,7 @@ return (
     <>
     <Header/>
     <BrokerClient/>
+<Info/>
     
     </>
 )

@@ -36,6 +36,7 @@ import Type from "../Type/Type"
                   client.on('message' , (topic , message) => {
                     setMessages(message);
                     console.log(`Received message: ${message} from topic: ${topic}`);
+
                 })
                 client.subscribe("value/#")
               

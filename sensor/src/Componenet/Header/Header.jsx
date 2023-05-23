@@ -8,7 +8,7 @@ function Header(){
 
     return(
 
-
+<section>
         <div className="header">
               <h1>Stuff Sensor </h1>
 
@@ -18,7 +18,7 @@ function Header(){
 
 
             </div>
-
+</section>
           
     );
 

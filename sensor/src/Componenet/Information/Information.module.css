@@ -44,3 +44,49 @@ section nav ul li a {
 section nav ul li a:hover {
     color: #ff0000;
 }
+
+/* style pour la page info.jsx
+
+ */
+
+.info {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+dd h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.current-value {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.value-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.value-item {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+dd {
+    position: absolute;
+    top: 300px;
+
+   margin-left: 100vh;
+}
+

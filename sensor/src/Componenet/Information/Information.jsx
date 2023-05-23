@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Information.module.css';
+//import './Information.module.css';
 
 function Information(){
 
@@ -32,7 +32,7 @@ const handleInputChange = (event) => {
 
                             <ul>
                             <h1>Sensors</h1>
-                              <li><a href="/Taux d'humidité salle serveur">Taux d'humidité salle serveur</a></li>
+                              <li><a href="/Taux d'humidité salle serveur">Taux d'humidité salle serveurrrr</a></li>
                               <li><a href="/Température Bureau">Température Bureau</a></li>
                               <li><a href="/Porte avant">Porte avant</a></li>
                               <li><a href="/Température Salle A111">Température Salle A111</a></li>
