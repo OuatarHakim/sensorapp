@@ -43,20 +43,28 @@ return (
     <div className={style.type}>
             <ul>
             {types.map ((type ,index) => (
-                        <li  key={type.name}> <Link to={`${location.pathname}/${formatTypeName(type.name)}`}>{type.name}</Link></li>
+                        <li  key={type.name}> <Link to={formatTypeName(type.name)}>{type.name}</Link></li>
  
                       ))}
             </ul>
     </div>
     <div className={style.info}>
-    <Routes>
-    <Route
-        path={`${location.pathname}/:typeName`}
+        <Routes>
+              {types.map((type, index) => (
+                <Route
+                  key={index}
+                  path={`/${formatTypeName(type.name)}`}
+                  element={
+                  <Info
+                     values={values[type.name] ? values[type.name].slice(-10) : []}
+                     type={type.name}
+                   />
+                   }
+                />
+              ))}
+            </Routes>
 
-            element={<Info values={values[typeName]} type={typeName} />}
-          />
-        </Routes>
-      </div>
+          </div>
     </>
 )
 
