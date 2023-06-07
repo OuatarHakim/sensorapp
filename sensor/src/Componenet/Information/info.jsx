@@ -18,10 +18,11 @@ const Info = ({values,type} ) => {
 
   return (
 <dd>
-     <div class='info'>
+     <div className='info'>
        <h1 className='title'>{type}</h1>
        <p className='subtitle'>Valeur actuelle:</p>
        <p className='current-value'>{valueType.slice(-1)}</p>
+
        <p className='subtitle'>Valeurs historiques:</p>
        <ul className='value-list'>
          {valueType.map((value) => (

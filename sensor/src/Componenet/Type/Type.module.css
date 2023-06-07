@@ -5,12 +5,13 @@
     list-style: none;
 }
 
-.info{
+Info{
     display: flex;
+    text-decoration-color: red;
 }
 
 Route  {
-    background-color: red;
+    background-color: white;
 }
 
 section li {
